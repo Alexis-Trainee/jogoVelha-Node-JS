@@ -1,7 +1,6 @@
 
 //------------------------------------JOGO DA VELHA-------------------------------------//
 //--------------------------------------------------------------------------------------//
-export {cont}
 import { checkWinners } from './gameVelha2.mjs';
 import readlineSync from 'readline-sync';
 
@@ -72,8 +71,7 @@ while(runGame){
 
 
     if (cont >= 5) {
-        checkWinners(board);
-
+        checkWinners(board, cont);
     }//while cont
 
     if(player === 'x') {
@@ -85,5 +83,3 @@ while(runGame){
     } 
 
 }//runGame
-
-runGame = false;

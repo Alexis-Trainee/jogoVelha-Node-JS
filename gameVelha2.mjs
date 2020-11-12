@@ -1,8 +1,5 @@
 //----------------------------------------------PARTE DAS FUNCÕES QUE COMPLEMENTAM O JOGO-------------------------------------------//
 
-import {cont} from './texte2.mjs';
-
-
 const verifyLines = (arr) => {
     const vencedores = [];
 
@@ -50,14 +47,8 @@ const verifyColumn = (arr) => {
     return verifyLines(columns);
 }
 
-
-
-
-const checkWinners = (jogo) => {
+const checkWinners = (jogo, totalMoves) => {
     const winners = [verifyLines(jogo), verifyColumn(jogo), verifyDiagonal(jogo)].flat();
-
-
-
 
     if (winners.length ===1){
         console.log('PARABÉNS ',winners[0],' VOCÊ VENCEU CONGRATULATIONS!!!')
@@ -69,7 +60,7 @@ const checkWinners = (jogo) => {
         console.log ('APERTE CTRL + C PARA SAIR!!!\n\n\n');
 
     }
-    else if(winners.length===0 && cont>=9) {
+    else if(winners.length===0 && totalMoves === 9) {
         console.log ('NÂO HÁ GANHADOR O JOGO TERMINOU EMPATADO!!!');
         console.log ('APERTE CTRL + C PARA SAIR!!!\n\n\n');
     }
