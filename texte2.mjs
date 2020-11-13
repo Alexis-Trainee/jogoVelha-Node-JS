@@ -19,20 +19,20 @@ let cont = 0;
 
 while(runGame){
 let dataInput=(data)=>{
-let test1= true;
-let resultado;
+let test= true;
+let result;
     
-    while(test1) {                                             
+    while(test) {                                             
    const input = readlineSync.question('  Digite um valor para a  ' + data + ' que esteja entre 0 e 2:\n');
  if (input>=0 && input<=2) {
-    resultado=input;
-    test1 =false;
+    result=input;
+    test=false;
 
         }else {
             console.log ('>>>' ,input, 'NÂO É UM VALOR VALIDO PARA A LINHA!!!<<<\n');     
         }
     }
-    return resultado;
+    return result;
 }   
 const line = dataInput('LINHA');
 const column = dataInput('COLUNA');

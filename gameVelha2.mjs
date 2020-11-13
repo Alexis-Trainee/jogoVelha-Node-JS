@@ -1,28 +1,28 @@
 //----------------------------------------------PARTE DAS FUNCÕES QUE COMPLEMENTAM O JOGO-------------------------------------------//
 
 const verifyLines = (arr) => {
-    const vencedores = [];
+    const champions = [];
 
     for(let i = 0; i < arr.length; i++) {
-        const linha = arr[i];
-        const elemento = linha[0];
-        let vencedor = true;
+        const line = arr[i];
+        const element = line[0];
+        let champion = true;
 
-        for(let indexDoElemento = 1; indexDoElemento < linha.length; indexDoElemento++) {
-            if (elemento !== linha[indexDoElemento] ) {
-                vencedor = false;
+        for(let indexElement = 1; indexElement < line.length; indexElement++) {
+            if (element !== line[indexElement] ) {
+                champion = false;
 
-            }else if (elemento === '-') {
-                vencedor = false;
+            }else if (element === '-') {
+                champion = false;
             }
         }
 
-        if (vencedor) {
-            vencedores.push(elemento);
+        if (champion) {
+            champions.push(element);
         }
     }
 
-    return vencedores;
+    return champions;
 }
 
 const verifyDiagonal = (arr) => {
