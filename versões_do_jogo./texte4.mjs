@@ -1,3 +1,4 @@
+
 //------------------------------------JOGO DA VELHA-------------------------------------//
 //--------------------------------------------------------------------------------------//
 import { checkWinners } from './gameVelha2.mjs';
@@ -31,9 +32,10 @@ let resultado;
         }else {
             console.log ('>>>' ,input, 'NÂO É UM VALOR VALIDO PARA A LINHA!!!<<<\n');     
         }
+
     }
     return resultado;
-}   
+}    
 const line = dataInput('LINHA');
 const column = dataInput('COLUNA');
 
@@ -56,4 +58,5 @@ const column = dataInput('COLUNA');
     }else {
         player = 'x';
     } 
+
 }//runGame

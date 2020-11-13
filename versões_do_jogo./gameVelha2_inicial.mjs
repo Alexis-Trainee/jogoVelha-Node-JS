@@ -9,7 +9,7 @@ const verifyLines = (arr) => {
         let vencedor = true;
 
         for(let indexDoElemento = 1; indexDoElemento < linha.length; indexDoElemento++) {
-            if (elemento !== linha[indexDoElemento] ) {
+            if (elemento !== linha[indexDoElemento] ) { // tá comparando o primeiro elemento com os outros 2.
                 vencedor = false;
 
             }else if (elemento === '-') {
