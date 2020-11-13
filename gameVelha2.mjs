@@ -45,8 +45,8 @@ const verifyColumn = (arr) => {
     return verifyLines(columns);
 }
 
-const checkWinners = (jogo, totalMoves) => {
-    const winners = [verifyLines(jogo), verifyColumn(jogo), verifyDiagonal(jogo)].flat();
+const checkWinners = (game, totalMoves) => {
+    const winners = [verifyLines(game), verifyColumn(game), verifyDiagonal(game)].flat();
 
     if (winners.length ===1){
         console.log('PARABÉNS ',winners[0],' VOCÊ VENCEU CONGRATULATIONS!!!')
